@@ -183,7 +183,7 @@ void FFMODAudioLinkInputClient::Start(USceneComponent* InComponent)
     auto PlayLambda = [SelfSP, LinkEvent, InComponent]()
         {
             UE_LOG(LogFMODAudioLink, Verbose, TEXT("FFMODAudioLinkInputClient::Start: SelfSP = %p, LinkEvent = %s, InComponent = %p.")
-                    , &SelfSP, LinkEvent.Get()->GetName(), &InComponent);
+                    , &SelfSP, *LinkEvent.Get()->GetName(), &InComponent);
 
             FMOD::Studio::EventDescription* EventDesc = IFMODStudioModule::Get().GetEventDescription(LinkEvent.Get());
             if (EventDesc != nullptr)
