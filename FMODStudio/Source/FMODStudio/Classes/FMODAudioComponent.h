@@ -456,4 +456,7 @@ private:
 
     /** To prevent restarting by delayed state restore from sequencer. */
     bool bPlayEnded;
+
+    FVector Velocity;
+    FVector LastLocation;
 };
