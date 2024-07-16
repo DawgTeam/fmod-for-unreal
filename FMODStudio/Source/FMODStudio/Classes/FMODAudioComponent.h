@@ -456,4 +456,7 @@ private:
 
     /** Used by FPlayingToken to prevent restarting from delayed sequencer state restore. */
     bool bPlayEnded;
+
+    FVector Velocity;
+    FVector LastLocation;
 };
